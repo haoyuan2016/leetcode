@@ -1,2 +1,1 @@
-# leetcode
-Learning leetcode
+C++
