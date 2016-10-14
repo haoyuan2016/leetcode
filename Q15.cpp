@@ -25,3 +25,47 @@ public:
         }
     }
 };
+
+// Acturally we do not need the recurive solution, simply brute force it. The code is as attached.
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        vector<vector<int>> res;
+        sort(nums.begin(), nums.end());
+        for(int i = 0; i < nums.size(); i++)
+        {
+            if(i != 0 && nums[i] == nums[i - 1])
+                continue;
+            int target = 0 - nums[i];
+            int j = i + 1; int k = nums.size() - 1;
+            while(j < k)
+            {
+                vector<int> container;
+                if(j != i + 1 && nums[j] == nums[j - 1])
+                {
+                    j++;
+                    continue;
+                }
+                else if(k != nums.size() - 1 && nums[k] == nums[k + 1])
+                {
+                    k--;
+                    continue;
+                }
+                else if(nums[j] + nums[k] == target)
+                {
+                    container.push_back(nums[i]);
+                    container.push_back(nums[j]);
+                    container.push_back(nums[k]);
+                    res.push_back(container);
+                    j++;
+                    k--;
+                }
+                else if(nums[j] + nums[k] + nums[i] < 0)
+                    j++;
+                else
+                    k--;
+            }
+        }
+        return res;
+    }
+};
