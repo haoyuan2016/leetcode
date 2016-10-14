@@ -89,3 +89,4 @@ public:
 };
 // note: write it case by case from the most significant digit to the least.
 // 4 and 9 are two special cases
+// take a look of the https://discuss.leetcode.com/topic/12384/simple-solution/2, which is really a simple enough solution
