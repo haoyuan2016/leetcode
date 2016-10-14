@@ -27,6 +27,8 @@ public:
 };
 
 // Acturally we do not need the recurive solution, simply brute force it. The code is as attached.
+// The trick is we do not need N^3 solutoin, we can use two iterators to go in both sides.
+// A thinking is whenever we have value problems, we can always sort and then go in both sides.
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
