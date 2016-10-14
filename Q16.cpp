@@ -35,4 +35,4 @@ public:
         return res;
     }
 };
-// similar as Q.15, note that we cannot move both iterators at the same time, we need to move only one iterator at one time.
+// similar as Q15, note that we cannot move both iterators at the same time, we need to move only one iterator at one time.
