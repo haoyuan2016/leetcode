@@ -62,3 +62,5 @@ public:
     }
 };
 // we only need to handle 6 special cases including: "IV", "IX", "XL", "XC", "CD" and "CM".
+// another solutoin on https://discuss.leetcode.com/topic/821/my-solution-for-this-question-but-i-don-t-know-is-there-any-easier-way/3
+// is the check backwards, a trick is to consider e.g., IV whether (res == valuse of 'V') > 5?
