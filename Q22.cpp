@@ -38,3 +38,33 @@ public:
         return res;
     }
 };
+// This is the coded inspired by https://discuss.leetcode.com/category/30/generate-parentheses
+class Solution {
+public:
+    vector<string> generateParenthesis(int n) {
+        vector<string> res;
+        string s;
+        helper(res, s, n, 0, 0);
+        return res;
+    }
+    void helper(vector<string>& res, string& s, int n, int left, int right)
+    {
+        if(left == n && right == n)
+        {
+            res.push_back(s);
+            return;
+        }
+        if(left < n)
+        {
+            s = s + "(";
+            helper(res, s, n, left + 1, right);
+            s.pop_back();
+        }
+        if(right < left)
+        {
+            s = s + ")";
+            helper(res, s, n, left, right + 1);
+            s.pop_back();
+        }
+    }
+};
