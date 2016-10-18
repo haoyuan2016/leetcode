@@ -30,3 +30,5 @@ public:
             }
         }
 };
+// The idea on https://discuss.leetcode.com/topic/5891/clean-iterative-solution-with-two-binary-searches-with-explanation/2 is great
+// We use two binary searches to find the start point and the end point, respectively.
