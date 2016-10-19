@@ -1,3 +1,4 @@
+// Actually we can directly save the result in a string with maximum length num1.length() + num2.length()
 class Solution {
 public:
     string multiply(string num1, string num2) {
