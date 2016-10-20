@@ -29,6 +29,7 @@ public:
     }
 };
 // Second method, we use a map<string, int> to store the sorted string and the index in res.
+// Note that we can use m.find(tmp) == m.end() to check whether a key exist in a map or unordered_map.
 class Solution {
 public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
