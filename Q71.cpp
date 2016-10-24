@@ -1,3 +1,5 @@
+// Learn to use getline in C++, see http://www.cplusplus.com/reference/string/string/getline/ 
+// istream& getline (istream& is, string& str, char delim);
 class Solution {
 public:
     string simplifyPath(string path) {
