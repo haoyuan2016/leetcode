@@ -36,3 +36,7 @@ public:
         return;
     }
 };
+
+// There is one drawback for the above solution, we must INT_MIN/2 is not used in the matrix.
+// Another solution see https://discuss.leetcode.com/topic/5056/any-shorter-o-1-space-solution
+// We use the first element in each row and each column to state whether it is all "0" in that row or column.
