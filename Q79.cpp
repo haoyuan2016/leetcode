@@ -1,3 +1,6 @@
+// I first use a vector<vector<bool>> to state whether a point is visited, but time out.
+// We do not need another bool vector, we can simply change the value of board[i][j]
+// Pay attention that the backtracking method needs to restore the state of board[i][j] after we changed it!!!!! Used a lot of time here.
 class Solution {
 public:
     bool exist(vector<vector<char>>& board, string word) {
