@@ -138,3 +138,14 @@ public:
 	}
 };
 
+// See how to clone a node
+private static TreeNode clone(TreeNode n, int offset) {
+    if (n == null) {
+        return null;
+    }
+    TreeNode node = new TreeNode(n.val + offset);
+    node.left = clone(n.left, offset);
+    node.right = clone(n.right, offset);
+    return node;
+}
+
