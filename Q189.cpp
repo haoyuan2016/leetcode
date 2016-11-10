@@ -1,3 +1,8 @@
+// Another solution is to reverse three times;
+// 1234567 with n = 7, k = 3
+// reversr and obtain 1234 765
+// reverse and obtain 4321 765
+// reverse and obtain 567 1234
 class Solution {
 public:
     void rotate(vector<int>& nums, int k) {
