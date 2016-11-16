@@ -1,3 +1,4 @@
+// My solution
 class Solution {
 public:
     int rangeBitwiseAnd(int m, int n) {
@@ -24,3 +25,4 @@ public:
         return res;
     }
 };
+// see http://www.cnblogs.com/grandyang/p/4431646.html
