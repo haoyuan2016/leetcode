@@ -39,3 +39,34 @@ public:
         return indegree;
     }
 };
+
+\\ DFS solution
+class Solution {
+public:
+    bool canFinish(int numCourses, vector<pair<int, int>>& prerequisites) {
+        vector<unordered_set<int>> graph = getGraph(numCourses, prerequisites);
+        vector<bool> visited(numCourses, false), onpath(numCourses, false);
+        for(int i = 0; i < numCourses; i++)
+            if(!visited[i] && isCircle(graph, visited, onpath, i))
+                return false;
+        return true;
+    }
+    
+    vector<unordered_set<int>> getGraph(int numCourses, vector<pair<int, int>>& prerequisites)
+    {
+        vector<unordered_set<int>> graph(numCourses);
+        for(int i = 0; i < prerequisites.size(); i++)
+            graph[prerequisites[i].second].insert(prerequisites[i].first);
+        return graph;
+    }
+    bool isCircle(vector<unordered_set<int>>& graph, vector<bool>& visited, vector<bool>& onpath, int i)
+    {
+        if(visited[i]) return false;
+        visited[i] = true;
+        onpath[i] = true;
+        for(int a : graph[i])
+            if(onpath[a] || isCircle(graph, visited, onpath, a)) return true;
+        onpath[i] = false;
+        return false;
+    }
+};
