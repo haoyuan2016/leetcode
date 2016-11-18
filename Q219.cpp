@@ -17,3 +17,5 @@ public:
         return false;
     }
 };
+// Another solution is to set set<int>, which maintains all the elements with in a interval [i,j], j - i <= k. 
+// If the input data set is too large, use set may be a better idea, otherwise our map<int, int> becomes huge.
