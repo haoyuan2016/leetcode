@@ -1,3 +1,4 @@
+// Note that it is a BST, so we do not need isFind function, we can simply compare the val of each node.
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
