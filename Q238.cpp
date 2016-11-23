@@ -28,3 +28,26 @@ public:
         return output;
     }
 };
+// Solution two: O(1) space and O(N) time.
+class Solution {
+public:
+    vector<int> productExceptSelf(vector<int>& nums) {
+        int n = nums.size();
+        vector<int> output(n);
+        int tmp = 1;
+        output[0] = tmp;
+        for(int i = 0; i < n - 1; i++)
+        {
+            tmp = tmp * nums[i];
+            output[i + 1] = tmp;
+        }
+        // output[n - 1] *= 1;
+        tmp = 1;
+        for(int i = n - 1; i > 0; i--)
+        {
+            tmp = tmp * nums[i];
+            output[i - 1] = output[i - 1] * tmp;
+        }
+        return output;
+    }
+};
