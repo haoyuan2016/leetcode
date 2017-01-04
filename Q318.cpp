@@ -1,4 +1,4 @@
-// solution one, time out
+// note that if((bitOper[i] & bitOper[j]) == 0) but not if(bitOper[i] & bitOper[j] == 0)
 class Solution {
 public:
     int maxProduct(vector<string>& words) {
