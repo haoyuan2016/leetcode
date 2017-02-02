@@ -22,3 +22,26 @@ public:
         return s;
     }
 };
+// Another solution from leetcode discuss
+class Solution {
+public:
+    string reverseVowels(string s) {
+        if(s.empty()) return s;
+        int start = 0;
+        int end = s.size() - 1;
+        string vowels = "aeiouAEIOU";
+        while(start < end)
+        {
+            while(start < end && vowels.find(s[start]) == string::npos)
+                start++;
+            while(start < end && vowels.find(s[end]) == string::npos)
+                end--;
+            char tmp = s[start];
+            s[start] = s[end];
+            s[end] = tmp;
+            start++;
+            end--;
+        }
+        return s;
+    }
+};
