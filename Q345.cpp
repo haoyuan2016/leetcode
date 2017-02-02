@@ -1,3 +1,4 @@
+// Note that this question is case sensitive.
 class Solution {
 public:
     string reverseVowels(string s) {
