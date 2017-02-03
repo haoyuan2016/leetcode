@@ -1,3 +1,5 @@
+// The key is to design the DP, where T[n] stands for the length of the longest subsequence ended with nums[n];
+// Another key is that, if we can addd one more element to add an existing subsequence, we need to guarantee that the added one % the largeest == 0.
 class Solution {
 public:
     vector<int> largestDivisibleSubset(vector<int>& nums) {
